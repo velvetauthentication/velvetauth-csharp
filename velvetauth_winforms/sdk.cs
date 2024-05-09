@@ -14,7 +14,6 @@ public class MyAppSDK
     private readonly string _version;
 
 
-    public int UserId { get; private set; }
     public string Username { get; private set; }
     public string Email { get; private set; }
     public DateTime ExpiryDate { get; private set; }
@@ -153,15 +152,11 @@ public class MyAppSDK
                     if (jsonResponse["user"] != null)
                     {
                         JObject user = (JObject)jsonResponse["user"];
-                        int userId = user["id"].Value<int>();
                         string userUsername = user["username"].Value<string>();
                         string userEmail = user["email"].Value<string>();
                         DateTime expiryDate = user["expiry_date"].Value<DateTime>();
 
-                        MessageBox.Show($"User ID: {userId}");
-                        MessageBox.Show($"Username: {userUsername}");
-                        MessageBox.Show($"Email: {userEmail}");
-                        MessageBox.Show($"Expiry Date: {expiryDate}");
+                        
 
                         MessageBox.Show("License registered successfully");
                         return true;
@@ -267,15 +262,11 @@ public class MyAppSDK
                         DateTime expiryDate = user["expiry_date"].Value<DateTime>();
 
 
-                        UserId = userId;
                         Username = userUsername;
                         Email = userEmail;
                         ExpiryDate = expiryDate;
 
-                        MessageBox.Show($"User ID: {userId}");
-                        MessageBox.Show($"Username: {userUsername}");
-                        MessageBox.Show($"Email: {userEmail}");
-                        MessageBox.Show($"Expiry Date: {expiryDate}");
+                     
 
                         MessageBox.Show("Login successful");
                         return true;
