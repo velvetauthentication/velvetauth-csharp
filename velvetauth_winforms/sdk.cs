@@ -8,7 +8,7 @@ using Newtonsoft.Json.Linq;
 public class MyAppSDK
 {
     private readonly HttpClient _httpClient;
-    private readonly string _apiBaseUrl = "http://localhost/vauth/api/";
+    private readonly string _apiBaseUrl = "https://velvetauth.com/api/";
     private readonly string _appId;
     private readonly string _secret;
     private readonly string _version;
