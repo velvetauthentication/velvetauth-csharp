@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Security.Principal;
 using System.Text;
@@ -8,7 +8,7 @@ using Newtonsoft.Json.Linq;
 public class MyAppSDK
 {
     private readonly HttpClient _httpClient;
-    private readonly string _apiBaseUrl = "https://velvetauth.com/api/";
+    private readonly string _apiBaseUrl = "https://velvetauth.com/api/1.0";
     private readonly string _appId;
     private readonly string _secret;
     private readonly string _version;
